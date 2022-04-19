@@ -19,7 +19,12 @@ Requirements:
 - Tratamento de exceções 
 
 ### Running tests
-
+## Teste banco de dados online h2
+* Rodar o arquivo DemoApplication.java como springboot api
+* Colar na pagina web:http://localhost:8080/h2-console
+  * No campo JDB URL:jdbc:h2:mem:testdb
+  * User Name: sa
+  * Password:
 
 
 ### Running local
