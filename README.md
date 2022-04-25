@@ -29,9 +29,9 @@ Requirements:
   * Password:
 
 
-### Running local
-## Rodar o codigo DemoAplication com a API springboot.
-## Rodar POSTMAN: Desenvolvido GET no Postman
+## Running local
+# Rodar o codigo DemoAplication com a API springboot.
+# Rodar POSTMAN: Desenvolvido GET no Postman
 # Para verificar produtos inserir:
 * http://localhost:8080/Products/
 * Verificar Produtos no formato JSON:
