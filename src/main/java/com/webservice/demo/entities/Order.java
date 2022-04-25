@@ -39,17 +39,13 @@ public class Order implements Serializable {
 	@JoinColumn(name = "client_id")
 	private User client;
 
-	// @OneToMany(mappedBy = "id.order")
-	// private Set<OrderItem> items = new HashSet<>();
 	
-	// @OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
-	// private Payment payment;
 	
 	public Order() {
 	}
 
 	public Order(Long id, Instant moment, OrderStatus orderStatus, User client) {
-		// public Order(Long id, Instant moment, User client) {
+		
 		super();
 		this.id = id;
 		this.moment = moment;
@@ -82,11 +78,7 @@ public class Order implements Serializable {
 			this.orderStatus=orderStatus.getCode();}
 	}
 
-	// public void setOrderStatus(OrderStatus orderStatus) {
-	// 	if (orderStatus != null) {
-	// 		this.orderStatus = orderStatus.getCode();
-	// 	}
-	// }
+	
 
 	public User getClient() {
 		return client;
@@ -96,25 +88,7 @@ public class Order implements Serializable {
 		this.client = client;
 	}
 
-	// public Payment getPayment() {
-	// 	return payment;
-	// }
-
-	// public void setPayment(Payment payment) {
-	// 	this.payment = payment;
-	// }
 	
-	// public Set<OrderItem> getItems() {
-	// 	return items;
-	// }
-	
-	// public Double getTotal() {
-	// 	double sum = 0.0;
-	// 	for (OrderItem x : items) {
-	// 		sum += x.getSubTotal();
-	// 	}
-	// 	return sum;
-	// }
 	
 	@Override
 	public int hashCode() {
