@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 import com.webservice.demo.entities.Order;
+import com.webservice.demo.entities.Product;
 import com.webservice.demo.entities.Category;
 // import com.webservice.demo.entities.Order;
 // import com.webservice.demo.entities.OrderItem;
@@ -18,7 +19,7 @@ import com.webservice.demo.entities.User;
 import com.webservice.demo.entities.enums.OrderStatus;
 import com.webservice.demo.repositories.OrderRepository;
 import com.webservice.demo.repositories.CategoryRepository;
-// import com.webservice.demo.repositories.ProductRepository;
+import com.webservice.demo.repositories.ProductRepository;
 // import com.webservice.demo.entities.enums.OrderStatus;
 import com.webservice.demo.repositories.UserRepository;
 import com.webservice.demo.repositories.OrderRepository;
@@ -36,8 +37,8 @@ public class TestConfig implements CommandLineRunner {
 	@Autowired
 	private CategoryRepository categoryRepository;
 	
-	// @Autowired
-	// private ProductRepository productRepository;
+	@Autowired
+	private ProductRepository productRepository;
 	
 	// @Autowired
 	// private OrderItemRepository orderItemRepository;
@@ -51,14 +52,14 @@ public class TestConfig implements CommandLineRunner {
 		Category cat2 = new Category(null, "Books");
 		Category cat3 = new Category(null, "Computers");
 		
-		// Product p1 = new Product(null, "The Lord of the Rings", "Lorem ipsum dolor sit amet, consectetur.", 90.5, "");
-		// Product p2 = new Product(null, "Smart TV", "Nulla eu imperdiet purus. Maecenas ante.", 2190.0, "");
-		// Product p3 = new Product(null, "Macbook Pro", "Nam eleifend maximus tortor, at mollis.", 1250.0, "");
-		// Product p4 = new Product(null, "PC Gamer", "Donec aliquet odio ac rhoncus cursus.", 1200.0, "");
-		// Product p5 = new Product(null, "Rails for Dummies", "Cras fringilla convallis sem vel faucibus.", 100.99, "");
+		Product p1 = new Product(null, "The Lord of the Rings", "Lorem ipsum dolor sit amet, consectetur.", 90.5, "");
+		Product p2 = new Product(null, "Smart TV", "Nulla eu imperdiet purus. Maecenas ante.", 2190.0, "");
+		Product p3 = new Product(null, "Macbook Pro", "Nam eleifend maximus tortor, at mollis.", 1250.0, "");
+		Product p4 = new Product(null, "PC Gamer", "Donec aliquet odio ac rhoncus cursus.", 1200.0, "");
+		Product p5 = new Product(null, "Rails for Dummies", "Cras fringilla convallis sem vel faucibus.", 100.99, "");
 		
 		categoryRepository.saveAll(Arrays.asList(cat1, cat2, cat3));
-		// productRepository.saveAll(Arrays.asList(p1, p2, p3, p4, p5));
+		productRepository.saveAll(Arrays.asList(p1, p2, p3, p4, p5));
 		
 		// p1.getCategories().add(cat2);
 		// p2.getCategories().add(cat1);
